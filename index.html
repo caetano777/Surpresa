@@ -2,13 +2,15 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Pra Malu ❤️</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
 
   body {
-    height:100vh;
-    overflow:hidden;
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
     background: linear-gradient(-45deg, #101820, #1c2b3a, #26344a, #14202c);
     background-size: 400% 400%;
     animation: bgMove 14s ease infinite;
@@ -231,6 +233,16 @@
     box-shadow: 0 0 40px rgba(255,77,109,0.6);
     animation: popIn 0.5s ease;
     max-width: 85%;
+  }
+
+  @media (max-width: 480px) {
+    .container { padding: 20px 16px; }
+    .photo-wrap { width: 140px; height: 140px; }
+    h1 { font-size: 1.5rem; }
+    #letter { font-size: 0.98rem; line-height: 1.7; }
+    #startScreen .icon { font-size: 48px; }
+    #secretBtn { width: 30px; height: 30px; bottom: 10px; right: 10px; }
+    #secretMsg p { font-size: 1.15rem; padding: 18px 24px; }
   }
 </style>
 </head>
