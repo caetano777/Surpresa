@@ -7,8 +7,10 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
 
+  html, body {
+    height:100%;
+  }
   body {
-    min-height:100vh;
     overflow-x:hidden;
     overflow-y:auto;
     background: linear-gradient(-45deg, #101820, #1c2b3a, #26344a, #14202c);
@@ -28,13 +30,14 @@
   }
 
   .float-heart {
-    position:absolute;
+    position:fixed;
     bottom:-50px;
     color: rgba(255,255,255,0.4);
     font-size: 20px;
     animation: rise linear infinite;
     pointer-events:none;
     user-select:none;
+    z-index:1;
   }
   @keyframes rise {
     0% { transform: translateY(0) rotate(0deg); opacity:0; }
